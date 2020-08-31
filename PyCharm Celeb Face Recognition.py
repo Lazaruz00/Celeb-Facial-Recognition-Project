@@ -59,7 +59,7 @@ for filename in os.listdir(test_faces):
             bot_right = (face_location[1], face_location[2]+22)
             cv2.rectangle(opencv_img, top_left, bot_right, col_rec, cv2.FILLED)
             cv2.putText(opencv_img, match, (face_location[3]+10, face_location[2]+15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, white_txt, font_thik)
-            save_folder = 'results3'
+            save_folder = 'results'
             os.makedirs(save_folder, exist_ok=True)
-            cv2.imwrite(f'results3/{count}.jpg', opencv_img)
+            cv2.imwrite(f'results/{count}.jpg', opencv_img)
             count+=1
